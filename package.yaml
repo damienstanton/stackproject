@@ -1,11 +1,11 @@
-name: FIXME
+name: valentines-day
 version: 0.0.1.0
 
 dependencies:
   - base
 
 library:
-  exposed-modules: FIXME
+  exposed-modules: ValentinesDay
   source-dirs: src
   ghc-options: -Wall
   # dependencies:
@@ -17,5 +17,5 @@ tests:
     main: Tests.hs
     source-dirs: test
     dependencies:
-      - FIXME
+      - valentines-day
       - hspec
