@@ -1,0 +1,21 @@
+name: FIXME
+version: 0.0.1.0
+
+dependencies:
+  - base
+
+library:
+  exposed-modules: FIXME
+  source-dirs: src
+  ghc-options: -Wall
+  # dependencies:
+  # - foo
+  # - bar
+
+tests:
+  test:
+    main: Tests.hs
+    source-dirs: test
+    dependencies:
+      - FIXME
+      - hspec
