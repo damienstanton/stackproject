@@ -1,0 +1,20 @@
+on:
+  pull_request:
+    branches: [ "main" ]
+
+name: Haskell
+jobs:
+  runhaskell:
+    name: valentines-day tests
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: haskell/actions/setup@v2
+        with:
+          ghc-version: '9.2.5'
+          enable-stack: true
+          stack-version: '2.9.1'
+      - run: stack test
