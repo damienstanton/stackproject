@@ -7,10 +7,14 @@ dependencies:
 library:
   exposed-modules: ValentinesDay
   source-dirs: src
-  ghc-options: -Wall
-  # dependencies:
-  # - foo
-  # - bar
+  ghc-options: -Wall -fplugin=Polysemy.Plugin
+  dependencies:
+  - aeson
+  - optparse-generic
+  - servant
+  - polysemy
+  - polysemy-plugin
+  - massiv
 
 tests:
   test:
